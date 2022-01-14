@@ -54,7 +54,6 @@ RUN set -ex \
     aria2 \
     aria2-daemon \
     bash \
-    bash-completion \
     bind-tools \
     bird \
     bridge-utils \
@@ -71,15 +70,12 @@ RUN set -ex \
     exa \
     expect \
     fd \
-    fd-zsh-completion \
     file\
     figlet \
     fio \
     fzf \
-    fzf-zsh-completion \
     lf \
     git \
-    git-zsh-completion \
     hexdump \
     highlight \
     helm \
@@ -88,7 +84,7 @@ RUN set -ex \
     libarchive-tools \
     libc6-compat \
     liboping \
-    lua5.3 \
+    lua5.4 \
     iftop \
     ipcalc \
     iperf3 \
@@ -103,15 +99,14 @@ RUN set -ex \
     iozone \
     jq \
     yq \
-    yq-zsh-completion \
     kubectl \
+    k9s \
     minio-client \
     mtr \
     mysql-client \
     net-snmp-tools \
     netcat-openbsd \
     nftables \
-    nfs-utils \
     neofetch \
     nethogs \
     nginx \
@@ -127,11 +122,9 @@ RUN set -ex \
     pv \
     procs \
     qperf \
-    tree \
     redis \
     ripgrep \
     rsync \
-    rsync-zsh-completion \
     samba \
     samba-client \
     samba-server \
@@ -143,11 +136,14 @@ RUN set -ex \
     sysstat \
     websocat \
     websocketd \
+    wuzz \
     tar \
     tzdata \
     tcpdump \
     tcptraceroute \
+    termshark \
     tshark \
+    tree \
     tmux \
     xclip \
     xz \
