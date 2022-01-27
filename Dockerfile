@@ -80,6 +80,7 @@ RUN set -ex \
     highlight \
     helm \
     htop \
+    httpie \
     hyperfine \
     libarchive-tools \
     libc6-compat \
@@ -168,7 +169,7 @@ RUN set -ex \
     && mkdir /share \
     #&& find / -name tcpdump 
     #&& mv /usr/sbin/tcpdump /usr/bin/tcpdump 
-    && echo 'alias lua="lua5.3"' >> "$ENV" \
+    && echo 'alias lua="lua5.4"' >> "$ENV" \
     && echo 'alias iperf="iperf3"' >> "$ENV" \
     && echo 'export TERM="xterm-256color"' >> "$ENV" \
     && chgrp root /usr/bin/dumpcap \
