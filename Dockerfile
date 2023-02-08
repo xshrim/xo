@@ -172,6 +172,7 @@ RUN set -ex \
     && echo 'alias lua="lua5.4"' >> "$ENV" \
     && echo 'alias iperf="iperf3"' >> "$ENV" \
     && echo 'export TERM="xterm-256color"' >> "$ENV" \
+    && echo 'export $(cat /proc/1/environ |tr "\0" "\n" | xargs)' >> "$ENV" \
     && chgrp root /usr/bin/dumpcap \
     && chmod 750 /usr/bin/dumpcap \
     && setcap cap_net_raw,cap_net_admin+eip /usr/bin/dumpcap \
