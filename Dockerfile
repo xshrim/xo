@@ -189,6 +189,18 @@ RUN set -ex \
     && rm -rf /var/cache/apk/* \
     && chmod a+x /root/run.sh
 
+# add helm-diff
+RUN helm plugin install https://github.com/databus23/helm-diff && rm -rf /tmp/helm-*
+
+# add helm-unittest
+RUN helm plugin install https://github.com/helm-unittest/helm-unittest && rm -rf /tmp/helm-*
+
+# add helm-push
+RUN helm plugin install https://github.com/chartmuseum/helm-push && \
+    rm -rf /tmp/helm-* \
+    /root/.local/share/helm/plugins/helm-push/testdata \
+    /root/.cache/helm/plugins/https-github.com-chartmuseum-helm-push/testdata
+
 #RUN echo 'export PATH=/root/tools/:$PATH' >> "$ENV"
 #RUN mkdir /lib64 && ln -s /lib/libc.musl-x86_64.so.1 /lib64/ld-linux-x86-64.so.2   # 解决go语言程序无法在alpine执行的问题
 #RUN mkdir /lib64 && ln -s /lib/libc.musl-x86_64.so.1 /lib64/ld-linux-x86-64.so.2 && apk add -U util-linux && apk add -U tzdata && cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime  # 解决go语言程序无法在alpine执行的问题和syslog不支持udp的问题和时区问题
