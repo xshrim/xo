@@ -1,0 +1,23 @@
+# https://pkg.go.dev/github.com/gokcehan/lf
+# ~/.config/lf/lfrc
+
+#map i $LESSOPEN='| ~/.config/lf/pv.sh %s' less -R $f
+set previewer ~/.config/lf/preview
+set cleaner ~/.config/lf/clean
+
+#curl https://raw.githubusercontent.com/gokcehan/lf/master/etc/colors.example -o ~/.config/lf/colors
+#curl https://raw.githubusercontent.com/gokcehan/lf/master/etc/icons.example -o ~/.config/lf/icons
+set icons
+set color256
+set mouse
+set number
+set color256
+
+map i $~/.config/lf/preview $f | less -R
+map <enter> open
+map <m-up> up
+map <m-down> down
+# map <m-1> open
+# map <m-2> updir
+
+
